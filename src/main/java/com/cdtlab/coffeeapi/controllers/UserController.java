@@ -2,6 +2,8 @@ package com.cdtlab.coffeeapi.controllers;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.cdtlab.coffeeapi.dto.UserDTO;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,22 +28,22 @@ public class UserController {
     }
 
     @RequestMapping(value="/{id}", method=RequestMethod.PUT)
-    public ResponseEntity<?> updateUser(@PathVariable id, @RequestBody UserDTO user, HttpServletRequest request) {) {
+    public ResponseEntity<?> updateUser(@PathVariable String id, @RequestBody UserDTO user, HttpServletRequest request) {) {
 
     }
 
     @RequestMapping(value="/{id}", method=RequestMethod.DELETE)
-    public ResponseEntity<?> deleteUser(@PathVariable String id) {
+    public ResponseEntity<?> deleteUser(@PathVariable String id, HttpServletRequest request) {
 
     }
 
     @RequestMapping(value="/{id}", method=RequestMethod.GET)
-    public ResponseEntity<?> getUser(@PathVariable String id) {
-
+    public ResponseEntity<?> getUser(@PathVariable String id, HttpServletRequest request) {
+        
     }
 
     @RequestMapping(value="/", method=RequestMethod.GET)
-    public ResponseEntity<?> allUsers() {
+    public ResponseEntity<?> allUsers(HttpServletRequest request) {
 
     }
 
