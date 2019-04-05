@@ -9,5 +9,4 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class IdentityDTO {
 	private String identity;
-
 }

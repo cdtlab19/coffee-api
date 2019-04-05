@@ -24,27 +24,27 @@ public class UserController {
 
     @RequestMapping(value="/", method=RequestMethod.POST)
     public ResponseEntity<?> createUser(@RequestBody UserDTO user, HttpServletRequest request) {
-        
+        return null;
     }
 
     @RequestMapping(value="/{id}", method=RequestMethod.PUT)
     public ResponseEntity<?> updateUser(@PathVariable String id, @RequestBody UserDTO user, HttpServletRequest request) {
-
+        return null;
     }
 
     @RequestMapping(value="/{id}", method=RequestMethod.DELETE)
     public ResponseEntity<?> deleteUser(@PathVariable String id, HttpServletRequest request) {
-
+        return null;
     }
 
     @RequestMapping(value="/{id}", method=RequestMethod.GET)
     public ResponseEntity<?> getUser(@PathVariable String id, HttpServletRequest request) {
-        
+        return null;
     }
 
     @RequestMapping(value="/", method=RequestMethod.GET)
     public ResponseEntity<?> allUsers(HttpServletRequest request) {
-
+        return null;
     }
 
     

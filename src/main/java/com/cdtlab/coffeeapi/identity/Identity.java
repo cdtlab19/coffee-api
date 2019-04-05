@@ -39,7 +39,7 @@ public class Identity implements User, Serializable {
 		this.mspId = mspId;
 	}
 
-	public Identity(String name, String affiliation, Enrollment enrollment, String mspId) {
+	public Identity(String name, String affiliation, String mspId,  Enrollment enrollment) {
 		super();
 		this.name = name;
 		this.affiliation = affiliation;

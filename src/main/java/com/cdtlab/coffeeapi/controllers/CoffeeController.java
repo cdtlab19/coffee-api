@@ -18,32 +18,32 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class CoffeeController {
     @RequestMapping(value="/", method=RequestMethod.POST)
     public ResponseEntity<?> CreateCoffee(@RequestBody CoffeeDTO coffee, HttpServlet request) {
-        return new ResponseEntity<>();
+        return null;
     }
     
     @RequestMapping(value="/{id}", method=RequestMethod.PUT)
     public ResponseEntity<?> UpdateCoffee(@RequestBody CoffeeDTO coffee) {
-        return new ResponseEntity<>();
+        return null;
     }
 
     @RequestMapping(value="/{id]", method=RequestMethod.DELETE)
     public ResponseEntity<?> DeleteCoffee(@RequestBody CoffeeDTO coffee) {
-        return new ResponseEntity<>();
+        return null;
     }
     
     @RequestMapping(value="/{id}", method=RequestMethod.GET)
     public ResponseEntity<?> GetCoffee(@RequestBody CoffeeDTO coffee) {
-        return new ResponseEntity<>();
+        return null;
     }
     
     @RequestMapping(value="/", method=RequestMethod.GET)
     public ResponseEntity<?> AllCoffee() {
-        return new ResponseEntity<>();
+        return null;
     }
-    
+
     @RequestMapping(value="/{id}/use/{useId}", method=RequestMethod.PUT)
     public ResponseEntity<?> UserCoffee(@RequestBody CoffeeDTO coffee) {
-        return new ResponseEntity<>();
+        return null;
     }
 
 }
