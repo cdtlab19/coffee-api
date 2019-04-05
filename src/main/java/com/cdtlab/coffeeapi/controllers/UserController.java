@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     // @Autowired
-    // UserService service;
+    // private UserService service;
 
     @RequestMapping(value="/", method=RequestMethod.POST)
     public ResponseEntity<?> createUser(@RequestBody UserDTO user, HttpServletRequest request) {
@@ -28,7 +28,7 @@ public class UserController {
     }
 
     @RequestMapping(value="/{id}", method=RequestMethod.PUT)
-    public ResponseEntity<?> updateUser(@PathVariable String id, @RequestBody UserDTO user, HttpServletRequest request) {) {
+    public ResponseEntity<?> updateUser(@PathVariable String id, @RequestBody UserDTO user, HttpServletRequest request) {
 
     }
 
