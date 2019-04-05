@@ -41,6 +41,11 @@
 			<version>1.18.6</version>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.hyperledger.fabric-sdk-java</groupId>
+			<artifactId>fabric-sdk-java</artifactId>
+			<version>1.4.0</version>
+		</dependency>
 
 	</dependencies>
 
