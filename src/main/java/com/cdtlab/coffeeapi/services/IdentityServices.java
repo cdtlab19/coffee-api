@@ -1,6 +1,11 @@
 package com.cdtlab.coffeeapi.services;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -25,7 +30,7 @@ import lombok.NoArgsConstructor;
 public class IdentityServices {
 	private Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 	private Identity identity;
-	private String walletPATH = "./wallet/";
+	private String walletPATH = "/home/ktatal/Documents/workspace/lab/coffeeapi/wallet/";
 	
 	public List<IdentityDTO> listIdentities(){
 		List<IdentityDTO> identitiesReturn = new ArrayList<>();
@@ -45,9 +50,13 @@ public class IdentityServices {
 		identity = null;
 		String credentialPATH = walletPATH + identityName + ".dat";
 
+
 		if(Files.exists(Paths.get(credentialPATH))){
 			identity = deserializeObject(credentialPATH);
+			LOGGER.info("File exists");
 		}
+
+
 
 		return identity;
 	}
@@ -103,6 +112,8 @@ public class IdentityServices {
 		if(!file.exists()){
 			return null;
 		}
+
+
 
 		FileInputStream fileReading = new FileInputStream(file);
 		ObjectInputStream objReading = new ObjectInputStream(fileReading);
