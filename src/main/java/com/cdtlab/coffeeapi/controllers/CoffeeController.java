@@ -4,44 +4,53 @@ import javax.servlet.http.HttpServlet;
 
 import com.cdtlab.coffeeapi.dto.CoffeeDTO;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
+
 
 
 @RestController
 @RequestMapping(value = "/api/coffees")
+@Api(value = "title", description = "description")
 public class CoffeeController {
-    @RequestMapping(value="/", method=RequestMethod.POST)
+
+    @ApiOperation(value = "Descrição")
+    @ApiResponses(
+            value = {
+                    @ApiResponse(code = 200, message = "Sucesso"),
+            }
+    )
+
+    @PostMapping(value="/")
     public ResponseEntity<?> CreateCoffee(@RequestBody CoffeeDTO coffee, HttpServlet request) {
-        return null;
+        return ResponseEntity.ok().body("topper da balada");
     }
     
-    @RequestMapping(value="/{id}", method=RequestMethod.PUT)
+    @PutMapping(value="/{id}")
     public ResponseEntity<?> UpdateCoffee(@RequestBody CoffeeDTO coffee) {
         return null;
     }
 
-    @RequestMapping(value="/{id]", method=RequestMethod.DELETE)
+    @DeleteMapping(value="/{id]")
     public ResponseEntity<?> DeleteCoffee(@RequestBody CoffeeDTO coffee) {
         return null;
     }
     
-    @RequestMapping(value="/{id}", method=RequestMethod.GET)
+    @GetMapping(value="/{id}")
     public ResponseEntity<?> GetCoffee(@RequestBody CoffeeDTO coffee) {
         return null;
     }
     
-    @RequestMapping(value="/", method=RequestMethod.GET)
+    @GetMapping(value="/")
     public ResponseEntity<?> AllCoffee() {
         return null;
     }
 
-    @RequestMapping(value="/{id}/use/{useId}", method=RequestMethod.PUT)
+    @PutMapping(value="/{id}/use/{useId}")
     public ResponseEntity<?> UserCoffee(@RequestBody CoffeeDTO coffee) {
         return null;
     }
